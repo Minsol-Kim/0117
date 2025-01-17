@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.service.MegaCoffeeMenuService;
 import org.example.service.MenuService;
 import org.example.service.MenuServiceImpl;
 import org.example.ui.MenuUI;
@@ -12,11 +13,12 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        MenuService service = new MenuServiceImpl();
+        MenuService service = new MegaCoffeeMenuService();
 
         MenuUI menuUI = new MenuUI(scanner,service);
 
         menuUI.execute();
+
 
 
     }
